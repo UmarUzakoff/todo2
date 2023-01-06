@@ -1,0 +1,349 @@
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
+
+:root{
+    --main-bg-color: black;
+    --main-input-color: hsl(235, 24%, 19%);
+    --main-span-color: white;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0 50px;
+    min-height: 100vh;
+    background-color: var(--main-bg-color);
+    background-image: url(/img/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+  }
+
+  .body-dark{
+    --main-bg-color: white;
+    background-image: url(/img/bg-desktop-light.jpg);
+  }
+
+  .form-white {
+    --main-input-color: white;
+  }
+
+  .dark-span {
+    --main-span-color: rgb(124, 124, 124);
+  }
+
+  .span-bg {
+    background-image: url(/img/icon-check.svg);
+  }
+
+  .mode-btn{
+    width: 30px;
+    height: 30px;
+    background-image: url(/img/icon-sun.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .moon-btn {
+    background-image: url(/img/icon-moon.svg);
+  }
+
+  .white-input { 
+    --main-input-color: white;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: row;
+    gap: 365px;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: #ECFBFF;
+        font-size: 40px;
+        letter-spacing: 0.5rem;
+    }
+  }
+
+  form {
+    color: #ECFBFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    gap: 5px;
+    background-color: var(--main-input-color);
+    border-radius: 5px;
+
+    span {
+        margin-left: 15px;
+        width: 25px;
+        height: 25px;
+        border: 1px solid var(--main-span-color);
+        display: block;
+        border-radius: 50px;
+    }
+  }
+
+  .container {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    input{
+        // font-family: 'Teko', sans-serif;
+        font-family: "Josefin Sans", sans-serif;
+        background: var(--main-input-color);
+        color: rgb(169, 167, 167);
+        font-size: 18px;
+        border-radius: 5px;
+        width: 480px;
+        height: 65px;
+        padding-left: 15px;
+        text-align: start;
+        border-color: transparent;
+        border:0;
+        outline:0;
+    }
+
+    input:focus {outline:none!important;}
+  }
+
+  .dark-post { 
+    --main-input-color: white;
+  }
+
+  #posts {
+    width: 540px;
+    // font-family: 'Dancing Script';
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 22px;
+    background: var(--main-input-color);
+    padding: 0 10px;
+    border-radius: 10px;
+    color: rgb(169, 167, 167);
+  }
+  
+  i {
+    cursor: pointer;
+  }
+
+  #posts div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  }
+  
+  .options {
+    display: flex;
+    gap: 25px;
+  }
+  
+  #msg {
+    color: red;
+  }
+
+//   .button {
+//     font-size: 19px;
+//     // font-family: 'Rubik Bubbles';
+//     font-family: "Josefin Sans", sans-serif;
+//     overflow: visible;
+//     border-radius: 3px;
+//     padding: 10px 20px;
+//     position: relative;
+//     background-color: #ECFBFF;
+//     border: 2px solid #A6E0EE;
+//     color: #2D7586;
+//     display: block;
+//     cursor: pointer;
+  
+//     &:hover {
+//         background-color: #DDF7FF;
+//     }
+//   }
+
+  @media (max-width: 650px) {
+    header { 
+        gap: 220px;
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    .container { 
+
+        input { 
+            width: 350px;
+            height: 50px;
+        }
+    }
+
+    #posts { 
+        width: 400px;
+    }
+  }
+
+  @media (max-width: 550px) {
+
+    body {
+        background-image: url(/img/bg-mobile-dark.jpg);
+    }
+    
+    .body-dark{
+        background-image: url(/img/bg-mobile-light.jpg);
+    }
+    
+
+    header {
+        gap: 250px;
+        margin-top: 50px;
+
+        h1 { 
+            font-size: 25px;
+        }
+    }
+
+    .container { 
+
+        input { 
+            width: 320px;
+            height: 55px;
+        }
+    }
+
+    #posts {
+      width: 375px;
+    }
+  }
+
+  @media (max-width: 490px) {
+    header {
+        gap: 200px;
+
+        h1 { 
+            font-size: 25px;
+        }
+    }
+
+    .container {
+        margin-top: 20px;
+
+        input { 
+            width: 260px;
+            height: 55px;
+        }
+    }
+
+    #posts {
+      width: 315px;
+    }
+  }
+
+  @media (max-width: 440px) {
+    header {
+        gap: 150px;
+
+        h1 { 
+            font-size: 30px;
+        }
+    }
+
+    .container {
+        margin-top: 5px;
+
+        input { 
+            width: 240px;
+            height: 50px;
+        }
+    }
+
+    #posts {
+      width: 300px;
+    }
+  }
+
+  @media (max-width: 410px) {
+    header {
+        gap: 90px;
+
+        h1 { 
+            font-size: 26px;
+        }
+    }
+
+    .container {
+
+        input { 
+            width: 200px;
+            height: 48px;
+        }
+    }
+
+    #posts {
+      width: 250px;
+    }
+
+    #posts div {
+        font-size: 20px;
+    }
+
+    .options {
+        gap: 12px;
+    }
+  }
+
+  @media (max-width: 330px) {
+    header {
+        gap: 80px;
+
+        h1 { 
+            font-size: 25px;
+        }
+    }
+
+    .container {
+
+        input { 
+            width: 160px;
+            height: 45px;
+        }
+    }
+
+    #posts {
+      width: 215px;
+    }
+
+    #posts div {
+        font-size: 15px;
+    }
+
+    .options {
+        gap: 10px;
+    }
+  }
+
+  .fas:hover {
+    color: aqua;
+  }
+
+  .fas:active {
+    color: aqua;
+  }
